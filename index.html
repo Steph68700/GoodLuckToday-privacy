@@ -60,7 +60,7 @@
   <header>
     <div class="eyebrow">Good Luck Today</div>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: September 10, 2026 · Last updated: September 10, 2026</p>
+    <p class="meta">Effective date: September 10, 2026 · Last updated: October 27, 2026</p>
     <nav class="language-nav" aria-label="Language">
       <a href="#english">English</a>
       <a href="#francais">Français</a>
@@ -72,31 +72,36 @@
     <p>Good Luck Today is published by RevealMe. For the processing described in this policy, RevealMe acts as the data controller. You can contact us at <a href="mailto:stjeziorny@gmail.com">stjeziorny@gmail.com</a>.</p>
 
     <h2>2. Scope</h2>
-    <p>This policy explains how the Good Luck Today Android application processes personal data. The game can be played locally without Facebook. Facebook sign-in is required only to access the social leaderboard.</p>
+    <p>This policy explains how the Good Luck Today Android and iOS applications process personal data. The game can be played locally without an account. On iOS, Apple Login can save a private daily score without Facebook. Facebook Login is used for the Facebook friends leaderboard.</p>
 
     <h2>3. Data processed</h2>
     <ul>
       <li><strong>Local game data:</strong> daily progress, individual mini-game results and the final luck score are stored on your device.</li>
       <li><strong>Facebook account data:</strong> when you choose Facebook Login, the app requests your public profile and the list of your Facebook friends who also use the app. This may include your Facebook user ID, display name and eligible friend IDs.</li>
+      <li><strong>Apple account data (iOS):</strong> if you choose Apple Login, Firebase Authentication receives your Apple identity, name and chosen email address when provided. You can choose Apple’s private relay email address. Your Firebase user ID, display name, daily score, date and creation timestamp are saved in a private Firestore area, separate from Facebook friends data. Apple accounts are not automatically linked to Facebook accounts.</li>
       <li><strong>Authentication data:</strong> Firebase Authentication creates a technical user identifier and stores authentication metadata needed to keep the leaderboard secure.</li>
       <li><strong>Leaderboard data:</strong> your Facebook user ID, Firebase user ID, display name, daily score, date, friend-visibility list and server timestamps are stored in Cloud Firestore.</li>
+      <li><strong>Advertising data:</strong> when advertising may be requested, the Google Mobile Ads SDK automatically collects and shares the device IP address, product interactions, diagnostic information, and device or account identifiers (including the Android advertising ID when available) for advertising, analytics and fraud-prevention purposes. The IP address may be used to estimate general location.</li>
       <li><strong>Technical data handled by service providers:</strong> Google/Firebase and Meta may process device, network, diagnostic, security and request information according to their own policies.</li>
     </ul>
-    <p>Good Luck Today does not request precise location, contacts, photos, microphone, health or financial data. Facebook automatic app events and advertiser ID collection are disabled in the current app configuration.</p>
+    <p>Good Luck Today does not request precise location, your device address book, photos, microphone, health or financial data. The Facebook friends data described above is limited to eligible friends who also use the app. Facebook automatic app events are disabled in the current app configuration.</p>
 
     <h2>4. Why we process data</h2>
     <ul>
-      <li>to authenticate users who choose to open the social leaderboard;</li>
+      <li>to authenticate users who choose to save a private score or open the Facebook friends leaderboard;</li>
       <li>to save a daily score and display a leaderboard limited to Facebook friends who also use Good Luck Today;</li>
+      <li>to display and measure advertising and prevent advertising fraud;</li>
       <li>to prevent unauthorized access, fraud and abuse;</li>
       <li>to respond to privacy, support and deletion requests.</li>
     </ul>
-    <p>Depending on the processing and applicable law, we rely on the performance of the service you request, your consent when you use Facebook Login and grant Facebook permissions, and our legitimate interest in securing the service. You may withdraw Facebook permissions through your Facebook settings, but the social leaderboard will then stop working.</p>
+    <p>Depending on the processing and applicable law, we rely on the performance of the service you request, your consent where required for advertising or when you use Facebook Login and grant Facebook permissions, and our legitimate interest in securing the service. You may change required advertising privacy choices through the privacy options entry point in the app. You may withdraw Facebook permissions through your Facebook settings, but the social leaderboard will then stop working.</p>
 
     <h2>5. Who receives the data</h2>
     <p>We do not sell personal data. Data may be processed by:</p>
     <ul>
       <li><strong>Google Firebase</strong>, for authentication and Cloud Firestore hosting;</li>
+      <li><strong>Google AdMob</strong>, for displaying and measuring advertisements and preventing fraud;</li>
+      <li><strong>Apple</strong>, when you choose Sign in with Apple;</li>
       <li><strong>Meta Platforms</strong>, for Facebook Login and the eligible-friends request;</li>
       <li><strong>your eligible Facebook friends using the app</strong>, who may see your display name and daily score in their leaderboard;</li>
       <li>competent authorities when disclosure is legally required.</li>
@@ -113,14 +118,16 @@
     </ul>
     <p>To request access, correction, export, restriction, objection or deletion, email <a href="mailto:stjeziorny@gmail.com?subject=Good%20Luck%20Today%20privacy%20request">stjeziorny@gmail.com</a> with the subject “Good Luck Today privacy request”. We may ask for limited information to verify that the request concerns your account. You may also remove Good Luck Today from your Facebook Apps and Websites settings; this revokes future Facebook access but does not by itself delete records already stored in Firebase.</p>
 
+    <p>In the iOS version with Apple Login, the account screen includes “Delete my account”. This requires a fresh Apple authorization, revokes Apple access, deletes the private saved scores and deletes the Firebase account. Today’s local game remains on the device. If deletion fails, the app displays an error; contact us if you need assistance.</p>
+
     <h2>8. Security</h2>
-    <p>Access to leaderboard records is restricted using Firebase Authentication and Firestore security rules. A signed-in player can read a score only when their Facebook ID is included in the score owner's eligible-friends list. No method of storage or transmission is completely secure.</p>
+    <p>Access to leaderboard records is restricted using Firebase Authentication and Firestore security rules. Facebook leaderboard access requires the reader’s Facebook ID in the owner’s eligible-friends list. Private Apple scores can only be read by their authenticated owner. No method of storage or transmission is completely secure.</p>
 
     <h2>9. Children</h2>
     <p>Good Luck Today is intended for users aged 16 and over. We do not knowingly collect personal data from children under 16. If you believe that a child under 16 has provided personal data, contact us so that we can investigate and delete it where appropriate.</p>
 
     <h2>10. Advertising</h2>
-    <p class="notice">The version reviewed for this policy does not contain an advertising SDK. If advertising is added, this policy and any required consent flow will be updated before that version is released.</p>
+    <p class="notice">Good Luck Today uses Google AdMob to display an adaptive banner and a daily interstitial advertisement. The app requests updated privacy information at launch and uses Google’s User Messaging Platform to display a consent message where required. Advertising requests are made only when the platform reports that they are permitted. The privacy options entry point in the app lets eligible users review or change their choices.</p>
 
     <h2>11. Changes</h2>
     <p>We may update this policy when the app, its service providers or legal requirements change. The effective date at the top of this page will be updated. Material changes will be communicated in the app or through another appropriate channel where required.</p>
@@ -134,31 +141,36 @@
     <p>Good Luck Today est publié par RevealMe. Pour les traitements décrits dans cette politique, RevealMe agit en qualité de responsable du traitement. Vous pouvez nous contacter à l’adresse <a href="mailto:stjeziorny@gmail.com">stjeziorny@gmail.com</a>.</p>
 
     <h2>2. Champ d’application</h2>
-    <p>Cette politique explique comment l’application Android Good Luck Today traite les données personnelles. Les mini-jeux peuvent être utilisés localement sans Facebook. La connexion Facebook est uniquement nécessaire pour accéder au classement social.</p>
+    <p>Cette politique explique comment les applications Android et iOS Good Luck Today traitent les données personnelles. Les mini-jeux peuvent être utilisés localement sans compte. Sur iOS, la connexion Apple permet d’enregistrer un score quotidien privé sans Facebook. La connexion Facebook sert au classement des amis Facebook.</p>
 
     <h2>3. Données traitées</h2>
     <ul>
       <li><strong>Données locales de jeu :</strong> progression quotidienne, résultats des mini-jeux et score final de chance, enregistrés sur votre appareil.</li>
       <li><strong>Données du compte Facebook :</strong> lorsque vous choisissez Facebook Login, l’application demande votre profil public et la liste de vos amis Facebook qui utilisent également l’application. Cela peut inclure votre identifiant Facebook, votre nom affiché et les identifiants des amis éligibles.</li>
+      <li><strong>Données du compte Apple (iOS) :</strong> si vous choisissez la connexion Apple, Firebase Authentication reçoit votre identité Apple, votre nom et l’adresse e-mail choisie lorsqu’ils sont fournis. Vous pouvez choisir l’adresse relais privée d’Apple. Votre identifiant Firebase, nom affiché, score quotidien, date et horodatage de création sont enregistrés dans un espace Firestore privé, séparé des données d’amis Facebook. Les comptes Apple ne sont pas automatiquement associés aux comptes Facebook.</li>
       <li><strong>Données d’authentification :</strong> Firebase Authentication crée un identifiant utilisateur technique et conserve les métadonnées nécessaires à la sécurisation du classement.</li>
       <li><strong>Données du classement :</strong> identifiant Facebook, identifiant Firebase, nom affiché, score quotidien, date, liste de visibilité des amis et horodatages serveur, enregistrés dans Cloud Firestore.</li>
+      <li><strong>Données publicitaires :</strong> lorsque la diffusion publicitaire est autorisée, le SDK Google Mobile Ads collecte et partage automatiquement l’adresse IP de l’appareil, les interactions dans l’application, des informations de diagnostic et des identifiants d’appareil ou de compte (dont l’identifiant publicitaire Android lorsqu’il est disponible) à des fins de publicité, d’analyse et de prévention de la fraude. L’adresse IP peut servir à estimer une localisation générale.</li>
       <li><strong>Données techniques traitées par les prestataires :</strong> Google/Firebase et Meta peuvent traiter des informations relatives à l’appareil, au réseau, au diagnostic, à la sécurité et aux requêtes selon leurs propres politiques.</li>
     </ul>
-    <p>Good Luck Today ne demande pas la localisation précise, les contacts, les photos, le microphone, les données de santé ou les données financières. Les événements automatiques Facebook et la collecte de l’identifiant publicitaire sont désactivés dans la configuration actuelle.</p>
+    <p>Good Luck Today ne demande pas la localisation précise, le carnet d’adresses de votre appareil, les photos, le microphone, les données de santé ou les données financières. Les données d’amis Facebook décrites ci-dessus sont limitées aux amis éligibles qui utilisent également l’application. Les événements automatiques Facebook sont désactivés dans la configuration actuelle.</p>
 
     <h2>4. Finalités et bases juridiques</h2>
     <ul>
-      <li>authentifier les utilisateurs qui souhaitent ouvrir le classement social ;</li>
+      <li>authentifier les utilisateurs qui souhaitent enregistrer un score privé ou ouvrir le classement des amis Facebook ;</li>
       <li>enregistrer un score quotidien et afficher un classement limité aux amis Facebook utilisant également Good Luck Today ;</li>
+      <li>afficher et mesurer des publicités et prévenir la fraude publicitaire ;</li>
       <li>prévenir les accès non autorisés, la fraude et les abus ;</li>
       <li>répondre aux demandes relatives à la confidentialité, à l’assistance et à la suppression.</li>
     </ul>
-    <p>Selon le traitement et le droit applicable, nous nous fondons sur l’exécution du service demandé, votre consentement lors de l’utilisation de Facebook Login et de l’octroi des autorisations Facebook, ainsi que notre intérêt légitime à sécuriser le service. Vous pouvez retirer les autorisations dans les paramètres Facebook ; le classement social cessera alors de fonctionner.</p>
+    <p>Selon le traitement et le droit applicable, nous nous fondons sur l’exécution du service demandé, votre consentement lorsqu’il est requis pour la publicité ou lors de l’utilisation de Facebook Login et de l’octroi des autorisations Facebook, ainsi que notre intérêt légitime à sécuriser le service. Vous pouvez modifier les choix publicitaires requis depuis l’accès aux options de confidentialité dans l’application. Vous pouvez retirer les autorisations dans les paramètres Facebook ; le classement social cessera alors de fonctionner.</p>
 
     <h2>5. Destinataires</h2>
     <p>Nous ne vendons pas les données personnelles. Elles peuvent être traitées par :</p>
     <ul>
       <li><strong>Google Firebase</strong>, pour l’authentification et l’hébergement Cloud Firestore ;</li>
+      <li><strong>Google AdMob</strong>, pour l’affichage et la mesure des publicités ainsi que la prévention de la fraude ;</li>
+      <li><strong>Apple</strong>, lorsque vous choisissez la connexion Apple ;</li>
       <li><strong>Meta Platforms</strong>, pour Facebook Login et la récupération des amis éligibles ;</li>
       <li><strong>vos amis Facebook éligibles utilisant l’application</strong>, qui peuvent voir votre nom affiché et votre score quotidien ;</li>
       <li>les autorités compétentes lorsqu’une divulgation est légalement obligatoire.</li>
@@ -175,14 +187,16 @@
     </ul>
     <p>Pour demander l’accès, la rectification, l’export, la limitation, l’opposition ou la suppression de vos données, écrivez à <a href="mailto:stjeziorny@gmail.com?subject=Demande%20de%20confidentialit%C3%A9%20Good%20Luck%20Today">stjeziorny@gmail.com</a> avec l’objet « Demande de confidentialité Good Luck Today ». Nous pouvons demander des informations limitées afin de vérifier que la demande concerne bien votre compte. Vous pouvez également supprimer Good Luck Today dans les paramètres « Applications et sites web » de Facebook ; cela révoque les accès futurs, mais ne supprime pas automatiquement les données déjà stockées dans Firebase.</p>
 
+    <p>Dans la version iOS avec connexion Apple, l’écran du compte propose « Supprimer mon compte ». Cette action demande une nouvelle autorisation Apple, révoque l’accès Apple, supprime les scores privés enregistrés et le compte Firebase. La partie locale du jour reste sur l’appareil. En cas d’échec, l’application affiche une erreur ; contactez-nous si vous avez besoin d’aide.</p>
+
     <h2>8. Sécurité</h2>
-    <p>L’accès aux données du classement est limité par Firebase Authentication et les règles de sécurité Firestore. Un joueur connecté ne peut lire un score que si son identifiant Facebook figure dans la liste d’amis éligibles du propriétaire du score. Aucun mode de stockage ou de transmission n’offre une sécurité absolue.</p>
+    <p>L’accès aux données du classement est limité par Firebase Authentication et les règles de sécurité Firestore. L’accès au classement Facebook exige que l’identifiant Facebook du lecteur figure dans la liste d’amis éligibles du propriétaire du score. Les scores Apple privés sont uniquement accessibles à leur propriétaire authentifié. Aucun mode de stockage ou de transmission n’offre une sécurité absolue.</p>
 
     <h2>9. Mineurs</h2>
     <p>Good Luck Today est destiné aux personnes âgées de 16 ans et plus. Nous ne collectons pas sciemment de données personnelles concernant des enfants de moins de 16 ans. Si vous pensez qu’un enfant de moins de 16 ans a transmis des données, contactez-nous afin que nous puissions vérifier la situation et les supprimer le cas échéant.</p>
 
     <h2>10. Publicité</h2>
-    <p class="notice">La version examinée pour cette politique ne contient aucun SDK publicitaire. Si de la publicité est ajoutée, cette politique et le mécanisme de consentement requis seront mis à jour avant la publication de cette version.</p>
+    <p class="notice">Good Luck Today utilise Google AdMob pour afficher une bannière adaptative et une publicité interstitielle quotidienne. L’application actualise les informations de confidentialité au lancement et utilise la plate-forme User Messaging de Google pour présenter un message de consentement lorsque cela est requis. Les demandes publicitaires ne sont effectuées que lorsque cette plate-forme indique qu’elles sont autorisées. L’accès aux options de confidentialité dans l’application permet aux utilisateurs concernés de consulter ou modifier leurs choix.</p>
 
     <h2>11. Modifications</h2>
     <p>Cette politique peut être mise à jour si l’application, ses prestataires ou les exigences légales évoluent. La date indiquée en haut de page sera actualisée. Toute modification importante sera communiquée dans l’application ou par un autre moyen approprié lorsque cela est requis.</p>
